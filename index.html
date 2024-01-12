@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Создать элемент button, добавить в блок <div class="content"></div>
+    При клике на который в консоль выводится сколько раз пользователь нажал на данную кнопку -->
+
+    <div class="content">
+
+    </div>
+
+    <script>
+
+        const divEl = document.querySelector('.content');
+        console.log(divEl);
+        const btnEl = document.createElement('button');
+        btnEl.textContent = "Нажми меня";
+        divEl.append(btnEl);
+
+        let count = 0;
+        btnEl.onclick = function () {
+            ++count;
+            btnEl.textContent = `Меня нажали ${count} раз`;
+        }
+
+    </script>
+
+</body>
+
+</html>
